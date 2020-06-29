@@ -557,7 +557,7 @@ $ curl -XGET -b cookie.txt $FRONTEND_ADDRESS/orders
 ]
 ```
 
-### カートAPI
+### カートAPI(optional)
 API経由でカートに商品を追加してみましょう。
 その後にカートの中身を確認してみましょう。
 
@@ -671,7 +671,7 @@ $ curl -XGET -b cookie.txt $FRONTEND_ADDRESS/orders
 
 コードレベルでも[こちらの実装](https://github.com/microservices-demo/front-end/blob/5e21067c2011a1f220322a704c9984fa206c4d12/public/customer-order.html#L205)から伺える。
 
-### 非同期通信
+### 非同期通信(optional)
 マイクロサービスアーキテクチャでは、サービス間の通信をどのように行うかは重要な選択の１つです。  
 Sock Shopでも、アーキテクチャデザインの図を見ると、shippingサービスはRabbitMQに対してデータを送り、queue-masterが処理していることがわかります。
 
@@ -714,7 +714,7 @@ cartsサービスを落としたあとに、タイムアウトで30秒ほど待�
 $ oc scale --replicas=1 deployment/carts
 ```
 
-### サービスをスケールさせてみよう
+### サービスをスケールさせてみよう(optional)
 マイクロサービスのスケーリングについて考えてみます。  
 マイクロサービスでは特定のサービスのみをスケールすることが容易であることが特徴の１つです。
 ためしにフロントエンドサービスをスケールさせてみてみましょう。
