@@ -748,14 +748,14 @@ spec:
 ```
 
 ```
-$ oc apply -f complete-demo.yml
+$ oc apply -f complete-demo.yaml
 ```
 
 ## トレーシング
 続いて、トレーシングを体験するためにjaegerなどのコンポーネントをデプロイします。
 
 ```
-$ oc apply -f jaeger.yml
+$ oc apply -f jaeger.yaml
 $ oc expose service/jaeger-query
 $ oc get route
 NAME           HOST/PORT                                                           PATH      SERVICES       PORT         TERMINATION   WILDCARD
