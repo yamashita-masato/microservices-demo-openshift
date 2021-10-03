@@ -66,32 +66,9 @@ user-6866b4bcf4-rbr7p           1/1       Running   0          38s
 user-db-78c5b86bb8-njsz8        1/1       Running   0          40s
 ```
 
-### Sock Shopの公開
-現在のままでは、サービスは公開されていないので、公開していきます。
+Routeオブジェクトが作成され、Sock Shopにアクセスできます。
 
 ```
-$ oc get route
-No resources found.
-
-$ oc get service
-NAME           TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)     AGE
-carts          ClusterIP   172.30.233.183   <none>        80/TCP      2m
-carts-db       ClusterIP   172.30.171.202   <none>        27017/TCP   2m
-catalogue      ClusterIP   172.30.223.222   <none>        80/TCP      2m
-catalogue-db   ClusterIP   172.30.148.67    <none>        3306/TCP    2m
-front-end      ClusterIP   172.30.184.134   <none>        80/TCP      2m
-orders         ClusterIP   172.30.195.188   <none>        80/TCP      2m
-orders-db      ClusterIP   172.30.0.235     <none>        27017/TCP   2m
-payment        ClusterIP   172.30.75.209    <none>        80/TCP      2m
-queue-master   ClusterIP   172.30.188.159   <none>        80/TCP      2m
-rabbitmq       ClusterIP   172.30.106.129   <none>        5672/TCP    2m
-shipping       ClusterIP   172.30.193.109   <none>        80/TCP      2m
-user           ClusterIP   172.30.24.155    <none>        80/TCP      2m
-user-db        ClusterIP   172.30.48.244    <none>        27017/TCP   2m
-
-$ oc expose service/front-end
-route.route.openshift.io/front-end exposed
-
 $ oc get route
 NAME        HOST/PORT                                           PATH      SERVICES    PORT      TERMINATION   WILDCARD
 front-end   front-end-sock-shop.apps.8aad.example.opentlc.com             front-end   web                     None
