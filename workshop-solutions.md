@@ -1,6 +1,9 @@
 # Sock Shop on OpenShiftでマイクロサービス体験
 本資料は、Weaveworksが公開しているマイクロサービスのデモアプリケーション[Sock Shop](https://microservices-demo.github.io/)を利用(on OpenShift)して、マイクロサービスを体験するハンズオンです。
 
+## 最新の動作確認環境
+- OpenShift 4.8
+
 ## Sock Shopについて
 https://github.com/microservices-demo/microservices-demo
 
