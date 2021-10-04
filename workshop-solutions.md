@@ -118,7 +118,7 @@ Sock Shopで利用されているデータを書き出してみましょう。
 `registry.gitlab.com/mosuke5/debug-container`は、mysqlとmongodbのクライアントをインストールしてあるCentOSベースのイメージです。
 
 ```
-$ oc run --generator=run-pod/v1 debug --image registry.gitlab.com/mosuke5/debug-container -it /bin/bash 
+$ oc run debug --image registry.gitlab.com/mosuke5/debug-container -it /bin/bash 
 # mysql -uroot -pfake_password socksdb -h catalogue-db
 mysql>
 mysql> show tables;
