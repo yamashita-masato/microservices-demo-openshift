@@ -108,6 +108,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    name: http
   selector:
     name: carts
 ---
@@ -202,6 +203,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    name: http
   selector:
     name: catalogue
 ---
@@ -237,7 +239,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - name: web
+    - name: http
       port: 80
       targetPort: 8079
       protocol: TCP
@@ -363,6 +365,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    name: http
   selector:
     name: orders
 ---
@@ -404,6 +407,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    name: http
   selector:
     name: payment
 ---
@@ -535,6 +539,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    name: http
   selector:
     name: shipping
 ---
@@ -642,5 +647,6 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    name: http
   selector:
     name: user
